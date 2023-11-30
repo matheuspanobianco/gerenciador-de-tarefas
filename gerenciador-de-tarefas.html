@@ -5,28 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerenciamento de Tarefas</title>
+    <link rel="stylesheet" href="g-style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        body {
-            background-color: #f8f9fa;
-            margin: 20px;
-        }
-
-        .task-container {
-            margin-top: 20px;
-        }
-    </style>
 </head>
 
 <body>
     <div class="container">
         <h1>Gerenciamento de Tarefas</h1>
+        <!-- nome do usuario -->
+        <div id="usuario-info"></div>
 
-        <div class="form-group">
-            <label for="username">Nome de usuário:</label>
-            <h1 id="welcome-message"></h1>
-            <input type="text" class="form-control" id="username" placeholder="Digite seu nome de usuário">
-        </div>
+
+        
 
         <button class="btn btn-primary">Salvar</button>
 
@@ -37,6 +27,8 @@
             </ul>
         </div>
     </div>
+
+    <script src="./g-script.js"></script>
 </body>
 
 </html>
