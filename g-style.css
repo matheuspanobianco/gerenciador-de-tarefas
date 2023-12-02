@@ -1,8 +1,53 @@
 body {
+    box-sizing: border-box;
     background-color: #f8f9fa;
-    margin: 20px;
+    padding: 50px;
 }
 
-.task-container {
-    margin-top: 20px;
+/* Header */
+#usuario-info {
+    padding: 20px;
 }
+
+header .btn-voltar {
+    background-color: chocolate;
+    border-color: chocolate;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid black 3px;
+}
+
+/* Formulario de tarefas */
+.divForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divForm .form-item {
+    padding: 10px;
+}
+
+.divForm .form-item input {
+    width: 100%;
+}
+
+.divForm .form-item label {
+    width: 100%;
+}
+
+.divForm .form-row .col-md-12 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#m-descricao {
+    height: 100px;
+}
+
+/* Lista de tarefas */

@@ -16,14 +16,6 @@ form2.addEventListener("submit", (event) => {
     cadastrarUsuario(nome_novo.value, email_novo.value, senha_novo.value);
 })
 
-function checkEmail() {
-    const emailValue = email_login.value;
-
-    if (emailValue === "") {
-        alert("Escreva um email válido")
-    }
-}
-
 // Recuperar usuários do LocalStorage ao carregar a página
 const users = JSON.parse(localStorage.getItem('users')) || {};
 
@@ -35,6 +27,11 @@ function gerarId() {
 
 // Função para cadastrar um novo usuário
 function cadastrarUsuario(nome, email, senha) {
+    const emailVerificado = Object.values(users).find(u => u.email === email);
+    if (emailVerificado) {
+        alert("Email ja existe!");
+        return;
+    }
     const id = gerarId();
 
     // Verificar se o ID já está em uso (muito improvável com a função geradora)
@@ -51,7 +48,7 @@ function cadastrarUsuario(nome, email, senha) {
     };
     // Salvar a lista atualizada de usuários no LocalStorage
     localStorage.setItem('users', JSON.stringify(users));
-    console.log("Usuário cadastrado com sucesso! ID do usuário:", id);
+    alert("Usuário cadastrado com sucesso!");
 }
 
 // Função para acessar as informações de um usuário por e-mail e senha
@@ -60,16 +57,17 @@ function acessarUsuario(email, senha) {
     const usuarioEncontrado = Object.values(users).find(u => u.email === email);
 
     if (!usuarioEncontrado) {
-        console.log("E-mail de usuário não encontrado.");
+        alert("E-mail de usuário não encontrado.");
         return;
     }
 
     // Verificar se a senha está correta
     if (usuarioEncontrado.senha === senha) {
-        console.log("Login realizado com sucesso!");
-        console.log("Informações do usuário:", usuarioEncontrado);
+        alert("Login realizado com sucesso!");
+        // Guardar os dados do usuario logado para a proxima pagina
+        localStorage.setItem('usuarioLogado', JSON.stringify(usuarioEncontrado));
         window.location.href = "gerenciador-de-tarefas.html"
     } else {
-        console.log("Senha incorreta.");
+        alert("Senha incorreta...");
     }
 }

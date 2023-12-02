@@ -9,23 +9,72 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 
+
 <body>
-    <div class="container">
+    <header class="cabecalho">
         <h1>Gerenciamento de Tarefas</h1>
-        <!-- nome do usuario -->
-        <div id="usuario-info"></div>
+        <button id="btn_voltar" class="btn btn-primary btn-voltar" type="submit">Voltar</button>
+    </header>
+
+    <!-- nome do usuario -->
+    <h3 id="usuario-info"></h3>
 
 
-        
+    <div class="divForm">
+        <form>
+            <div class="form-row">
+                <div class="form-item col-md-12">
+                    <input type="text" id="m-tarefa" placeholder="Tarefa" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-item col-md-6">
+                    <label for="m-data-inicio">Data início</label>
+                    <input type="date" id="m-data-inicio" required>
+                </div>
+                <div class="form-item col-md-6">
+                    <label for="m-data-termino">Data término</label>
+                    <input type="date" id="m-data-termino" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-item col-md-6">
+                    <label for="m-hora-inicio">Hora início</label>
+                    <input type="time" id="m-hora-inicio" required>
+                </div>
+                <div class="form-item col-md-6">
 
-        <button class="btn btn-primary">Salvar</button>
+                    <label for="m-hora-termino">Hora término</label>
+                    <input type="time" id="m-hora-termino" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-item col-md-12">
+                    <input type="text" id="m-descricao" placeholder="Descrição" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-item col-md-12">
+                    <button class="btn btn-primary btn-criar-tarefa">Criar tarefa</button>
+                </div>
+            </div>
+        </form>
+    </div>
 
-        <div class="task-container">
-            <h3>Suas Tarefas</h3>
-            <ul id="taskList" class="list-group">
-                <!-- Tarefas serão exibidas aqui -->
-            </ul>
-        </div>
+    <h4>Suas Tarefas</h4>
+    <div class="divTable">
+        <table>
+            <thead>
+                <th>Tarefa</th>
+                <th>Início</th>
+                <th>Término</th>
+                <th>Status</th>
+                <th class="acao">Alterar</th>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
     </div>
 
     <script src="./g-script.js"></script>
