@@ -44,7 +44,8 @@ function cadastrarUsuario(nome, email, senha) {
         id: id,
         nome: nome,
         email: email,
-        senha: senha
+        senha: senha,
+        tasks: []
     };
     // Salvar a lista atualizada de usuários no LocalStorage
     localStorage.setItem('users', JSON.stringify(users));
