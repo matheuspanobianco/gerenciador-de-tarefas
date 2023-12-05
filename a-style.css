@@ -1,0 +1,45 @@
+body {
+    margin: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* formulario */
+.divForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divForm .form-item {
+    padding: 10px;
+}
+
+.divForm .form-item input {
+    width: 100%;
+}
+
+.divForm .form-item label {
+    width: 100%;
+}
+
+.divForm .form-row .col-md-12 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#m-descricao {
+    height: 100px;
+}
+
+/* botoes */
+#formAlterar .btn-cancelar {
+    background-color: chocolate;
+    border-color: chocolate;
+}
+#formAlterar button{
+    margin: 10px;
+}
+

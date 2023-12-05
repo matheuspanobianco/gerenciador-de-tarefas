@@ -1,11 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Alterar Tarefa</title>
+    <link rel="stylesheet" href="a-style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
+
 <body>
-    <h1>alterar</h1>
+    <header class="cabecalho">
+        <h1>Alterar Tarefa</h1>
+    </header>
+
+    <div class="divForm">
+        <form id="formAlterar">
+            <div class="form-row">
+                <div class="form-item col-md-12">
+                    <input type="text" id="tarefa" placeholder="Tarefa" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-item col-md-6">
+                    <label for="data-inicio">Data início</label>
+                    <input type="date" id="data-inicio" required>
+                </div>
+                <div class="form-item col-md-6">
+                    <label for="data-termino">Data término</label>
+                    <input type="date" id="data-termino" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-item col-md-6">
+                    <label for="hora-inicio">Hora início</label>
+                    <input type="time" id="hora-inicio" required>
+                </div>
+                <div class="form-item col-md-6">
+                    <label for="hora-termino">Hora término</label>
+                    <input type="time" id="hora-termino" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-item col-md-12">
+                    <input type="text" id="descricao" placeholder="Descrição" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-item col-md-12" id="botoes">
+                    <button id="btn_alterar" class="btn btn-primary btn-alterar-tarefa" type="button">Alterar
+                        Tarefa</button>
+                    <button id="btn_excluir" class="btn btn-danger btn-excluir-tarefa" type="button">Excluir
+                        Tarefa</button>
+                    <button id="btn_concluir" class="btn btn-success btn-concluir-tarefa" type="button">Marcar como
+                        realizada</button>
+                    <button id="btn_cancelar" class="btn btn-primary btn-cancelar" type="button">Cancelar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+    <script src="a-script.js"></script>
 </body>
+
 </html>

@@ -1,4 +1,5 @@
 body {
+    font-family: 'Arial', sans-serif;
     box-sizing: border-box;
     background-color: #f8f9fa;
     padding: 50px;
@@ -51,3 +52,26 @@ header .btn-voltar {
 }
 
 /* Lista de tarefas */
+.divTable {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divTable table {
+    width: 100%;
+    /* ocupar 100% da largura da tabela */
+    margin: 50px;
+    padding: 50px;
+}
+
+.divTable th {
+    font-weight: bold;
+}
+
+/* linha zebrada */
+.divTable tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+
+}
+
